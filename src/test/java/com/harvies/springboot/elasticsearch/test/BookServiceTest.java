@@ -18,9 +18,7 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
@@ -96,7 +94,7 @@ public class BookServiceTest {
         Page<Book> byAuthor = bookService.findByAuthor("Rambabu Posa", PageRequest.of(0, 10));
         assertThat(byAuthor.getTotalElements(), is(4L));
 
-        Page<Book> byAuthor2 = bookService.findByAuthor("Mkyong",PageRequest.of(0, 10));
+        Page<Book> byAuthor2 = bookService.findByAuthor("Mkyong", PageRequest.of(0, 10));
         assertThat(byAuthor2.getTotalElements(), is(1L));
 
     }
