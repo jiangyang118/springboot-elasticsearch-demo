@@ -17,9 +17,9 @@
             </fileNamePattern>
             <MaxHistory>30</MaxHistory>
         </rollingPolicy>
-        <layout class="ch.qos.logback.classic.PatternLayout">
+        <encoder>
             <pattern>%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n</pattern>
-        </layout>
+        </encoder>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>INFO</level>
         </filter>
@@ -38,9 +38,9 @@
             </fileNamePattern>
             <MaxHistory>30</MaxHistory>
         </rollingPolicy>
-        <layout class="ch.qos.logback.classic.PatternLayout">
+        <encoder>
             <pattern>%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n</pattern>
-        </layout>
+        </encoder>
     </appender>
 
     <root level="${logging.level}">
